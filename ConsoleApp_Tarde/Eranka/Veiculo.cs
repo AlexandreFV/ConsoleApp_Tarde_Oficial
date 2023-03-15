@@ -15,7 +15,21 @@ namespace ConsoleApp_Tarde.Eranka
 
         public string ExibirDados()
         {
-            return Cor + " " + quantRodas + " " + quantAssentos + " " + TemMotor;
+            if (TemMotor)
+            {
+                return "Tem motor " + "Cor do veiculo: " + Cor + " " + quantRodas + " " + quantAssentos;
+            }
+
+            else
+            {
+
+                return Cor + " " + quantRodas + " " + quantAssentos;
+
+
+            }
+
+
+
 
         }
     }

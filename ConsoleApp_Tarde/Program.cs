@@ -43,13 +43,48 @@ Bike bicicleta = new Bike();
 bicicleta.Cor = "Azul";
 bicicleta.quantRodas = 2;
 bicicleta.quantAssentos = 1;
-car.TemMotor = false;
+bicicleta.TemMotor = false;
 
 Aviao aero = new Aviao();
 aero.Cor = "Branca";
 aero.quantAssentos = 200;
 aero.quantRodas = 3;
-car.TemMotor = true;
+aero.TemMotor = true;
+
+List<Veiculo> VeiculoLista = new List<Veiculo>(); //Cria a lista
+
+VeiculoLista.Add(car); //Adiciona a lista
+VeiculoLista.Add(aero); //Adiciona a lista
+VeiculoLista.Add(bicicleta); //Adiciona a lista
+
+foreach (var item in VeiculoLista) //Lista Produto por Produto
+{
+
+    Console.WriteLine(item.ExibirDados());
+
+}
+
+//Console.WriteLine("Quantidade de itens na lista: " + VeiculoLista.Count);
+//Produto = 250;
 
 
+Random rand = new Random();
 
+List<Produto> ProdutoLista = new List<Produto>();
+
+for (int i=0;i<rand.Next(200,500);i++)
+{
+
+    Produto p = new Produto(i, "Produto tal: " + i, i / 2);
+    ProdutoLista.Add(p);
+
+}
+
+
+foreach (var item in ProdutoLista)
+{
+
+    Console.WriteLine(item.ExibirDadosProd());
+
+
+}

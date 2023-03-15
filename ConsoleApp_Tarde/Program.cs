@@ -65,7 +65,6 @@ foreach (var item in VeiculoLista) //Lista Produto por Produto
 }
 
 //Console.WriteLine("Quantidade de itens na lista: " + VeiculoLista.Count);
-//Produto = 250;
 
 
 Random rand = new Random();
@@ -85,6 +84,25 @@ foreach (var item in ProdutoLista)
 {
 
     Console.WriteLine(item.ExibirDadosProd());
+
+
+}
+
+List<Cliente> ClienteLista = new List<Cliente>();
+
+for (int i = 0; i < rand.Next(200, 500); i++)
+{
+    Endereco e = new Endereco(i,"Rua","15906",i," "," ");
+    Cliente m = new Cliente(i, "Cliente tal: " + i, "10234" + i,e);
+    ClienteLista.Add(m);
+
+}
+
+
+foreach (var item in ClienteLista)
+{
+
+    Console.WriteLine(item.ExibirDadosClie());
 
 
 }

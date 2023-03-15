@@ -21,6 +21,16 @@ namespace ConsoleApp_Tarde
             Telefone = telefone;
             Endereco = endereco;
         }
+
+        public string ExibirDadosClie()
+        {
+
+            return "Nome: " + Nome + " Telefone: " + Telefone + " Endereço:" + Endereco.EnderecoCompleto();
+
+
+        }
+
+
         public void setEndereco(Endereco endereco)
         {
             Endereco = endereco;
